@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Raleway:wght@200,700&family=Roboto&display=swap');
+
+@charset "UTF-8";
+/* Body */
+body {
+	font-family: source-sans-pro;
+	background-color: #f2f2f2;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-style: normal;
+	font-weight: 200;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* Container */
+.container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100vh;
+	background: url("../images/basement.jpg");
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.joinContainer {
+	width: 55vw;
+	height: 32vw;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5);  
+    border-radius: 5px;
+    position: relative;
+	background: rgba(0, 0, 0, 0.65);
+	backdrop-filter: blur(13px);
+    z-index: 1;
+    overflow: hidden;
+}
+
+.tag {
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	margin-top: 15px;
+	margin-left: 20px;
+}
+
+.tag img {
+	vertical-align: middle;
+	width: 30px;
+	margin-bottom: 5px;
+}
+
+.tag .name {
+	font-size: 21px;
+	color: rgba(255,255,255,0.77);
+	letter-spacing: 1px;
+	margin-left: 5px;
+	font-weight: 100;
+}
+#thinspace {
+	width: 3px;
+	display: inline;
+}
+
+.title {
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+    line-height: 45px;
+	font-size: 50px;
+	font-weight: 800;
+	margin-left: 20px;
+}
+
+.joinButton {
+	width: 230px;
+	height: 100px;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	font-size: 45px;
+	font-weight: 700;
+	line-height: 100px;
+	letter-spacing: 1.3px;
+	user-select: none;
+	text-align: center;
+	cursor: pointer;
+    margin: 10% auto 0;
+	border-radius: 13px;
+	border: solid 3px white;
+	transition: background 0.2s, color 0.4s, transform 0.1s;
+}
+
+.joinButton:hover {
+	background: white;
+	color: black;
+}
+
+.joinButton.joined {
+	background: white;
+	color: black;
+	pointer-events: none;
+}
+
+
+.joinButton:active {
+	transform: scale(0.95);
+}
+
+.alert {
+	color: rgba(215, 128, 128, 0.8);
+	font-family: 'Open Sans';
+	font-weight: 400;
+	font-size: 16px;
+	width: 100%;
+	height: 20px;
+	text-align: center;
+	margin-top: 40px;
+}
+
+.alert span {
+	font-weight: bold;
+	color: rgba(265, 118, 118, 0.8);
+}

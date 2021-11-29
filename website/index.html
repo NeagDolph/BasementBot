@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basement Recruitment</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!-- Main Container -->
+<div class="container">
+  <div class="joinContainer">
+    <div class="tag"><img src="images/lemontree.png"><span class="name">Lemon<span id="thinspace"></span>Tree</span></div>
+    <div class="title">The Basement</div>
+    <div class="joinButton">Join</div>
+	<div class="alert"></div>
+  </div>
+</div>
+<script>
+	function join() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				if (this.responseText == "true") {
+					var button = document.querySelector(".joinButton")
+					button.innerHTML = "Joined!"
+					button.classList.add("joined")
+				} else if (this.responseText == "false") {
+					document.querySelector(".alert").innerHTML = "<span>Error</span> You're already in the basement!"
+				}
+			}
+        };
+        xhttp.open("POST", "join", true);
+		xhttp.send();
+    }
+		
+	document.querySelector(".joinButton").onclick = function() {
+		join();
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "basement-bot",
+  "version": "1.0.0",
+  "description": "Bot for basement stats",
+  "main": "send.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "ngrok": "^3.2.7",
+    "node-powershell": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node bot.js",
+    "build": "node service.js",
+    "remove": "node uninstall.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
